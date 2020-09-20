@@ -8,6 +8,3 @@ If the time reaches zero the quiz is over and your score is 0
 
 If you successfully beat the timer congratulations! Don't forget to enter your initials to keep track of your progress.
 
-
-![Screenshot JS Quiz Homescreen](/assets/JS Quiz Home Screen.png)
-Format: ![Alt Text](url)
