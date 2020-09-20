@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Coding Quiz</title>
+</head>
+
+<body>
+  <header>
+    <div class="container-fluid text-white bg-info">
+      <div class="row">
+        <div class="w-30 mx-auto">
+          <h1 id="titlebar">JavaScript Timed Quiz</h1>
+        </div>
+      </div>
+    </div>
+<div class="container-fluid bg-light"><br/></div>
+      <div class="container-fluid text-white bg-info h-500 ">
+        <div class="row justify-content-end ">
+          <div class="col-9 col-sm-8">
+            <p id="highscoreId" onclick="highscoreNav()">Highscores</p>
+          </div>
+          <div class="col-3 col-sm-4">
+            <p id="timerdisplay"></p>
+          </div>
+        </div>
+      </div>
+  </header>
+  <div class="container-md">
+    <div id="main_screen">
+      <h1>Coding Quiz Challenge</h1>
+      <p class="w-75">Try to answer the following code-related questions within the time limit.<br /> Keep in mind that
+        incorrect answers
+        will penalize your score/time by ten seconds!</p>
+      <div class="btn-group-vertical">
+        <button id="start_Quiz-Btn" class="btn btn-success rounded-lg ">Start Quiz</button>
+      </div>
+    </div>
+    <div id="q1" class="quizpages">
+      <h2>What does the abbreviation DOM stand for?</h2>
+      <form class="quizform">
+        <div id="q1ButtonGroup" class="butwidth btn-group-vertical">
+          <input type="button" value="Domino's" class="wrongAnswer btn btn-secondary rounded-lg "
+            onClick="answerQ1(this.value)"><br />
+          <input type="button" value="Document Object Model" class="wrongAnswer btn btn-secondary rounded-lg"
+            onClick="answerQ1(this.value)"><br />
+          <input type="button" value="Direct Orientation Memory" class="btn btn-secondary rounded-lg correctAnswer"
+            onClick="answerQ1(this.value)"><br />
+          <input type="button" value="Door Opening Machine" class="btn btn-secondary rounded-lg wrongAnswer"
+            onClick="answerQ1(this.value)"><br />
+        </div>
+      </form>
+    </div>
+    <div id="q2" class="quizpages">
+      <h2>Arrays in JavaScript can be used to store?</h2>
+      <form class="quizform">
+        <div id="q2ButtonGroup" class="btn-group-vertical">
+          <input type="button" value="Numbers" class="btn btn-secondary rounded-lg wrongAnswer"
+            onClick="answerQ2(this.value)"><br />
+          <input type="button" value="Strings" class="btn btn-secondary rounded-lg wrongAnswer"
+            onClick="answerQ2(this.value)"><br />
+          <input type="button" value="Booleans" class="btn btn-secondary rounded-lg  wrongAnswer"
+            onClick="answerQ2(this.value)"><br />
+          <input type="button" value="All of the Above" class="btn btn-secondary rounded-lg  correctAnswer"
+            onClick="answerQ2(this.value)"><br />
+          <p id="q1outcome"></p>
+        </div>
+      </form>
+    </div>
+    <div id="q3" class="quizpages">
+      <h2>Commonly used data types DO NOT include?</h2>
+      <form class="quizform">
+        <div id="q3ButtonGroup" class="btn-group-vertical">
+          <input type="button" value="Strings" class="btn btn-secondary rounded-lg  wrongAnswer"
+            onClick="answerQ3(this.value)"><br />
+          <input type="button" value="Booleans" class="btn btn-secondary rounded-lg  wrongAnswer"
+            onClick="answerQ3(this.value)"><br />
+          <input type="button" value="Alerts" class="btn btn-secondary rounded-lg  correctAnswer"
+            onClick="answerQ3(this.value)"><br />
+          <input type="button" value="Numbers" class="btn btn-secondary rounded-lg  wrongAnswer"
+            onClick="answerQ3(this.value)"><br />
+          <p id="q2outcome"></p>
+        </div>
+      </form>
+    </div>
+    <div id="q4" class="quizpages">
+      <h2>A condition in an if / else statement is enclosed in ____?</h2>
+      <form class="quizform">
+        <div id="q4ButtonGroup" class="btn-group-vertical">
+          <input type="button" value="Quotes" class="btn btn-secondary rounded-lg  wrongAnswer"
+            onClick="answerQ4(this.value)"><br />
+          <input type="button" value="Curly Brackets" class="btn btn-secondary rounded-lg  wrongAnswer"
+            onClick="answerQ4(this.value)"><br />
+          <input type="button" value="Parenthesis" class="btn btn-secondary rounded-lg  correctAnswer"
+            onClick="answerQ4(this.value)"><br />
+          <input type="button" value="Square Brackets" class="btn btn-secondary rounded-lg  wrongAnswer"
+            onClick="answerQ4(this.value)"><br />
+          <p id="q3outcome"></p>
+        </div>
+      </form>
+    </div>
+    <div id="results" class="quizresultspage">
+
+      <h2>Quiz Completed!</h2>
+      <p id="resultsOutcomeScore"></p>
+      <form class="quizform" id="q10form">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 col-sm-9">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon3">Enter your initials</span>
+                </div>
+                <input id="initalInputField" type="text" class="initalinput form-control"
+                  aria-describedby="basic-addon3">
+                <div class="input-group-append">
+                  <button class="btn btn-secondary" type="button" id="button-addon2">Submit</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <p id="q4outcome"></p>
+        </div>
+
+      </form>
+    </div>
+
+
+    <div id="high_scores" class="quizhscorepage">
+      <h2>Highscores</h2>
+      <div id="hScroreBtnFGroup">
+        <ol id="hscoreOl"></ol>
+        <input type="button" value="Go Back" class="btn btn-secondary rounded-lg" onClick="highscorebtn(this.value)">
+        <input type="button" value="Clear Scores" class="btn btn-secondary rounded-lg"
+          onClick="highscorebtn(this.value)">
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

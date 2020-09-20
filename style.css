@@ -1,0 +1,42 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+p {
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+h1, h2 {
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+#titlebar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.btn-group-vertical {
+    width: 220px;
+    margin: 20px 0px 0px 40px;
+}
+
+.quizpages, #results, #high_scores  {
+    margin: 50px 20px 50px 20px;
+   display: none;
+}
+
+#main_screen {
+    margin: 50px 20px 50px 20px;
+}
+
+.initialinput {
+    width: 200px;
+}
+
+
+
+
